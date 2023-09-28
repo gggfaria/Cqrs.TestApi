@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Commands\" />
+    <None Remove="Commands\Movies\" />
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Movies\" />
+    <None Remove="Domain\" />
+    <None Remove="Domain\Movies\" />
+    <None Remove="DTOs\" />
+    <None Remove="DTOs\Requests\" />
+    <None Remove="DTOs\Requests\Movies\" />
+    <None Remove="DTOs\Responses\" />
+    <None Remove="DTOs\Responses\Movies\" />
+    <None Remove="DTOs\Common\" />
+    <None Remove="Profiles\" />
+    <None Remove="Queries\" />
+    <None Remove="Queries\Movies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Commands\Movies\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Movies\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Domain\Movies\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\Requests\" />
+    <Folder Include="DTOs\Requests\Movies\" />
+    <Folder Include="DTOs\Responses\" />
+    <Folder Include="DTOs\Responses\Movies\" />
+    <Folder Include="DTOs\Common\" />
+    <Folder Include="Profiles\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Queries\Movies\" />
+  </ItemGroup>
+</Project>
